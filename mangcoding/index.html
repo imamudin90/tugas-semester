@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Mangcoding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <style type="text/tailwindcss">
+    @layer utilities {
+          nav a {
+            @apply text-nav hover:text-black font-raleway;
+          }
+
+          nav a.active {
+            @apply text-black;
+          }
+
+          .button-primary {
+            @apply bg-primary py-[12px] px-[30px] text-white rounded-full hover:bg-secondary;
+          }
+          .bg-gradient{
+            background: linear-gradient(
+                180deg, 
+                #FFFFFF 0%, 
+                #EAF4FF 46.08%, 
+                #FFFFFF 100%
+            );
+          }
+          .text-gradient {
+            background: linear-gradient(90.01deg, #E18700 35.24%, #FF32AD 66.21%, #0EC5D7 97.18%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+        }
+        </style>
+</head>
+<body>
+    <header class="bg-gradient" >
+        <section class="container mx-auto">
+            <section id="top-bar" class="flex justify-between py-10 px-20 ">
+                <div id="left-side" class="flex gap-5 items-center px-20"  >
+                    <img src="/asset/Logo.jpg" alt="">
+                    <nav>
+                        <ul class="grid grid-cols-6 gap-10 " >
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Our Work</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="right-side" class="flex gap-10 py-10">
+                    <button>
+                        <img src="/asset/Group 23.png" alt="">
+                    </button>
+                    <a href="#get-started" class="button-primary">Get Started</a>
+                </div>
+            </section>
+        </section>
+        <section id="hero" class="flex flex-col gap-5">
+            <div class="max-w-[700px] mx-auto mt-[100px]">
+                <h1 class="text-2xl lg:text-4xl xl:text-5xl text-center font-nunito font-bold">It's Fun To Build a Website With The <span class="text-gradient">Mangcoding Team</span></h1>
+                <p class="text-center py-5">
+                    The Mangcoding team will help build a website for your company with quality and guaranteed services, with custom templates you can create a website as you like.
+                </p>
+            </div>
+            <div class="action mx-auto flex justify-center items-center gap-10">
+                <a href="#get-started" class="button-primary" >Get Started</a>
+                <a href="#" class="underline flex items-center gap-3">Explore our blog <img src="/asset/Vector.png" alt=""></a>
+            </div>
+            <img src="/asset/Design.jpg" alt="" class="mx-auto">
+        </section>
+    </header>
+        <section id="sponsor" class="mx-auto items-center py-10" >
+            <h1 class="text-center py-10">Brands that trust us</h1>
+            <div id="container" class="flex mx-auto justify-center gap-40">
+                <img src="/asset/image 1.jpg" alt="" >
+                <img src="/asset/image 2.jpg" alt="">
+                <img src="/asset/image 3.jpg" alt="">
+                <img src="/asset/image 4.jpg" alt="">
+                <img src="/asset/image 5.jpg" alt="">
+            </div>
+        </section>
+    <section class="container mx-auto py-10 ">
+        <div id="header-3" class="flex mx-auto justify-between"> 
+        <h1>Services</h1>
+        <a href="#get-started" class="button-primary">Build Website</a>
+        </div>
+        <div id="text" class="mx-auto">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på <br> trekavis. Makrona tregät plang. Bekässade kast, eftersom sore.
+        </div>
+    </section>
+    <section class="container mx-auto justify-center">
+    <div id="content" class="container mx-auto py-20 grid gap-20 grid-cols-3 grid-row-2 justify-between">
+            <div id="content" class="shadow-md shadow-inner justify-center">
+                <img src="/asset/shopify.png" alt="">
+                 <h1>Shopify Theme Development</h1>
+                 <p>Start from 700 USD for project base or 35 USD per hour</p>
+            </div>
+        
+        <div>
+            <img src="/asset/php.png" alt="">
+            <h1>Web Aplication Development</h1>
+            <p>Start from 1000 USD for project base or 35 USD per hour</p>
+        </div>
+        <div class="row-span-2 shadow-md py-10">
+            <img src="/asset/asistans.png" alt="">
+            <h1>Assistans services</h1>
+            <p>Start from 33 USD for project base <br> or 35 USD per hour</p>
+            <p>more Services</p>
+            <h1>Technical Assistans <br> <br> <br> <br>
+                Support Assistans <br> <br>
+                VIP Assistans <br>
+                Social Media Admin</h1>
+        </div>
+            <div id="content" class="shadow-md shadow-inner items-center">
+                <img src="/asset/wordpress.png" alt="">
+                 <h1>Wordpress Theme Development</h1>
+                 <p>Start from 600 USD for project base or 35 USD per hour</p>
+            </div>
+                <div id="content" class="shadow-md shadow-inner items-center">
+                    <img src="/asset/www.png" alt="">
+                     <h1>Custom App/Plugins Development</h1>
+                     <p>Start from 300 USD for project base or 35 USD per hour</p>
+                </div>
+    
+        </div>
+    </section>
+    <section class="container mx-auto py-5">
+        <h1 class="text-center">What We Do</h1>
+        <p class="text-center">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på <br> trekavis. Makrona tregät plang. Bekässade kast, eftersom sore. </p>
+        <div id="content" class="container mx-auto ">
+        </div>
+    </section>\
+    <section class="container mx-auto flex justify-center py-10 gap-10 " >
+        <div id="design" class="align-center py-5 ">
+            <img src="/asset/what we do/design.png" alt="">
+            <h1 class="text-center">Design</h1>
+            <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
+        </div>
+        <div id="frontEnd" class="align-center py-5">
+            <img src="/asset/what we do/front end.png" alt="">
+            <h1 class="text-center">Front-end</h1>
+            <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
+        </div>
+        <div id="Backend" class="align-center py-5">
+            <img src="/asset/what we do/back end.png" alt="">
+            <h1 class="text-center">Back-end</h1>
+            <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
+        </div>
+        <div id="check" class="align-center py-5">
+            <img class="center" src="/asset/what we do/check.png" alt="">
+            <h1 class="text-center">Chek Test</h1>
+            <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
+        </div>
+    </section>
+    <section class="container mx-auto">
+        <h1 class="text-center"> Our Work</h1>
+        <p class="text-center">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på </p>
+    </section>
+    <div id="orally" class="container mx-auto flex justify-between">
+        <div>
+        <img src="/asset/logo orally.png" alt="">
+        <img class="absolut" src="/asset/orally.png" alt="">
+        <h1>Retainer orally Studi</h1>
+        <p>Retainer Orely Studio is a website from the Orely company that we <br> developed into Code.</p>
+        <div class="flex gap-10">
+            <a href="#get-started" class="button-primary">Read more</a>
+            <a href="#" class="underline flex items-center gap-3">Link Website<img src="/asset/Vector.png" alt=""></a>
+        </div>
+    </div>
+         <div>
+            <img src="/asset/hp-laptop.png" alt="" class="content content-right">
+        </div>
+    </div>
+    <section class="container mx-auto flex justify-between gap-5 px-30 py-10">
+        <div class="px-10 bg-[#F6F9FC]">
+            <img src="/asset/federasi ice skating.png" alt="">
+            <h1>Federasi Ice Skating Indonesia</h1>
+            <br>
+            <p>Retainer Orely Studio is a website from the Orely company that we <br> developed into Code.</p>
+            <div class="flex gap-10">
+                <a href="#get-started" class="button-primary">Read more</a>
+                <a href="#" class="underline flex items-center gap-3">Link Website<img src="/asset/Vector.png" alt=""></a>
+            </div>
+            <img src="/asset/MacBook Pro 16.png" alt="">
+        </div>
+        <div class="px-10 h-92">
+            <img src="/asset/bea cukai.png" alt="">
+            <h1>Bea Cukai Sangatta</h1>
+            <p>Retainer Orely Studio is a website from the Orely company that we <br> developed into Code.</p>
+            <div class="flex gap-10">
+                <a href="#get-started" class="button-primary">Read more</a>
+                <a href="#" class="underline flex items-center gap-3">Link Website<img src="/asset/Vector.png" alt=""></a>
+            </div>
+            <img src="/asset/MacBook Pro 16 (1).png" alt="">
+        </div>
+    </section>
+    <div class="align-center justify-between-center">
+        <a href="#get-started" class="button-primary">Our work</a>
+    </div>
+    <section class="container mx-auto flex py-20 px-20">
+       <div> <h1><span class="text-gradient"> What Do People Say About </span><br>
+            The Mangcoding Team?</h1>
+        <div  class="flex">
+            <img src="/asset/Frame 1597882693.png" alt="">
+            <h1>Riko sapto bimo</h1>
+            <p> <br> Managing Director Orely.co</p>
+        </div>
+        <div  class="flex">
+            <img src="/asset/Frame 1597882693 (1).png" alt="">
+            <h1>Riko sapto bimo</h1>
+            <p> <br> Managing Director Orely.co</p>
+        </div>
+        </div>
+        <div class="align-center justify-center">
+            <img src="/asset/quotes.png" alt="">
+        </div>
+    </section>
+    <div class="align-center">
+        <h1 class="text-center">Our blog</h1>
+    </div>
+    <section class="container mx-auto flex justify-center gap-10">
+        <div class="">
+            <img src="/asset/8 (1).png" alt="">
+            <h1>
+                8 Alasan Pentingnya Melakukan Pencadangan Situs Web
+            </h1>
+            <p>September 2.2022</p>
+            <p>Lörem ipsum farade kroresade planat. Semipons ner, <br> deciliga men niponade. </p>
+        </div>
+        <div class="">
+            <img src="/asset/8 (2).png" alt="">
+            <h1>
+                8 Alasan Pentingnya Melakukan Pencadangan Situs Web
+            </h1>
+            <p>September 2.2022</p>
+            <p>Lörem ipsum farade kroresade planat. Semipons ner, <br> deciliga men niponade. </p>
+        </div>
+        <div class="">
+            <img src="/asset/8 (3).png" alt="">
+            <h1>
+                8 Alasan Pentingnya Melakukan Pencadangan Situs Web
+            </h1>
+            <p>September 2.2022</p>
+            <p>Lörem ipsum farade kroresade planat. Semipons ner, <br> deciliga men niponade. </p>
+        </div>
+    </section>
+    <div class="align-center justify-center">
+        <a href="#get-started" class="button-primary">Our work</a>
+    </div>
+    <section class="container mx-auto py-10 px-20 justify-between">
+       <div> <h1>Let's build a website with mangcoding</h1>
+        <p>Mangcoding team will help you in branding your product</p>
+    </div>
+    <div>
+        <a href="#get-started" class="button-primary">Build website now</a>
+    </div>
+    </section>
+</body>
+</html>

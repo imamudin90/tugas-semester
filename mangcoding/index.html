@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Plus+Jakarta+Sans&display=swap" rel="stylesheet"> 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
     <style type="text/tailwindcss">
@@ -35,6 +38,13 @@
                 #FFFFFF 100%
             );
           }
+            .bg-content{
+                Background : blur 300px(
+                Solid rgba(255, 255, 255, 0.01)
+                )
+
+            }
+          
           .text-gradient {
             background: linear-gradient(90.01deg, #E18700 35.24%, #FF32AD 66.21%, #0EC5D7 97.18%);
             -webkit-background-clip: text;
@@ -125,12 +135,16 @@
                         </ul>
                     </nav>
                 </div>
-                <div id="right-side" class="pr-12 lg:pr-0 flex items-center gap-10">
+                <div id="right-side" class="pr-12 lg:pr-0 flex items-center gap-5">
+                    <div class="input-group relative flex flex-wrap items-stretch rounded gap-2">
+                        <input type="search" class="form-control block px-3 py-1.5 text-base font-normal text-gray-700 border border-solid bg-white focus:outline-none" placeholder="Search">
+                        <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center rounded" id="basic-addon2"></span>
                     <button>
                         <img src="/asset/Group 23.png" alt="">
                     </button>
-                    <a href="#get-started" class="button-primary">Get Started</a>
                 </div>
+                    <a href="#get-started" class="button-primary">Get Started</a>
+                    
                 <button class="mobile-btn fixed right-6 top-6 lg:static lg:hidden">
                     <svg class="bar" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 17H19M5 12H19M5 7H19" stroke="black" stroke-width="2.01562" stroke-linecap="round" stroke-linejoin="round"/>
@@ -143,8 +157,8 @@
         </section>
         <section id="hero" class="flex flex-col gap-5">
             <div class="max-w-[700px] mx-auto mt-[100px]">
-                <h1 class="text-2xl lg:text-4xl xl:text-5xl text-center font-nunito font-bold">It's Fun To Build a Website With The <span class="text-gradient">Mangcoding Team</span></h1>
-                <p class="text-center py-5">
+                <h1 class="text-[50px] text-center font-plusJakartaSans font-bold">It's Fun To Build a Website <br> With The <span class="text-gradient">Mangcoding Team</span></h1>
+                <p class="text-center py-5 text-[#636363]">
                     The Mangcoding team will help build a website for your company with quality and guaranteed services, with custom templates you can create a website as you like.
                 </p>
             </div>
@@ -156,8 +170,8 @@
         </section>
     </header>
         <section id="sponsor" class="mx-auto items-center py-10" >
-            <h1 class="text-center py-10">Brands that trust us</h1>
-            <div id="container" class="flex mx-auto justify-center gap-40">
+            <h1 class="text-center py-10 text-[18px] text-[#646464]">Brands that trust us</h1>
+            <div id="container" class="flex mx-auto justify-center gap-20">
                 <img src="/asset/image 1.jpg" alt="" >
                 <img src="/asset/image 2.jpg" alt="">
                 <img src="/asset/image 3.jpg" alt="">
@@ -165,29 +179,35 @@
                 <img src="/asset/image 5.jpg" alt="">
             </div>
         </section>
-    <section class="container mx-auto py-10 ">
+    <section class="container mx-auto py-10 bg-content py-15">
         <div id="header-3" class="flex mx-auto justify-between"> 
-        <h1>Services</h1>
-        <a href="#get-started" class="button-primary">Build Website</a>
+            <h1 class="text-[35px] font-bold text-plusJakartaSans pb-5">Services</h1>
+                <div>
+                    <a href="#get-started" class="button-primary">Build Website</a>
+                </div>
         </div>
-        <div id="text" class="mx-auto">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på <br> trekavis. Makrona tregät plang. Bekässade kast, eftersom sore.
+        <div id="text" class="pb-20">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på <br> trekavis. Makrona tregät plang. Bekässade kast, eftersom sore.
         </div>
-    </section>
-    <section class="container mx-auto justify-center">
-    <div id="content" class="container mx-auto py-20 grid gap-20 grid-cols-3 grid-row-2 justify-between">
-            <div id="content" class="shadow-md shadow-inner justify-center">
-                <img src="/asset/shopify.png" alt="">
+    <section class="container mx-auto justify-center bg-[rgba 255, 255, 255, 0.01]">
+        <div id="content" class="container mx-auto py-10 grid gap-20 grid-cols-3 grid-row-2 ">
+            <div id="content" class="shadow-md rounded-lg justify-center py-10 shadow-inner text-center">
+                <div class="flex justify-center items-center">
+                    <img src="/asset/shopify.png" alt="" >
+                </div>
                  <h1>Shopify Theme Development</h1>
                  <p>Start from 700 USD for project base or 35 USD per hour</p>
             </div>
-        
-        <div>
-            <img src="/asset/php.png" alt="">
-            <h1>Web Aplication Development</h1>
-            <p>Start from 1000 USD for project base or 35 USD per hour</p>
-        </div>
-        <div class="row-span-2 shadow-md py-10">
+            <div id="content" class="shadow-md rounded-lg justify-center py-10 shadow-inner text-center">
+                <div class="flex justify-center items-center">
+                    <img src="/asset/php.png" alt="">
+                </div>
+                <h1>Web Aplication Development</h1>
+                <p>Start from 1000 USD for project base or 35 USD per hour</p>
+             </div>
+        <div class="row-span-2 shadow-md rounded-lg justify-center py-10 shadow-inner text-center">
+            <div class="flex justify-center items-center">
             <img src="/asset/asistans.png" alt="">
+            </div>
             <h1>Assistans services</h1>
             <p>Start from 33 USD for project base <br> or 35 USD per hour</p>
             <p>more Services</p>
@@ -196,56 +216,69 @@
                 VIP Assistans <br>
                 Social Media Admin</h1>
         </div>
-            <div id="content" class="shadow-md shadow-inner items-center">
+            <div id="content" class="shadow-md rounded-lg justify-center py-10 shadow-inner text-center">
+                <div class="flex justify-center items-center">
                 <img src="/asset/wordpress.png" alt="">
+                </div>
                  <h1>Wordpress Theme Development</h1>
                  <p>Start from 600 USD for project base or 35 USD per hour</p>
             </div>
-                <div id="content" class="shadow-md shadow-inner items-center">
+            <div id="content" class="shadow-md rounded-lg justify-center py-10 shadow-inner text-center">
+                <div class="flex justify-center items-center">
                     <img src="/asset/www.png" alt="">
+                </div>
                      <h1>Custom App/Plugins Development</h1>
                      <p>Start from 300 USD for project base or 35 USD per hour</p>
                 </div>
     
         </div>
     </section>
+    </section>
     <section class="container mx-auto py-5">
-        <h1 class="text-center">What We Do</h1>
+        <h1 class="text-center text-[45px] text-plusJakartaSans font-bold">What We Do</h1>
         <p class="text-center">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på <br> trekavis. Makrona tregät plang. Bekässade kast, eftersom sore. </p>
         <div id="content" class="container mx-auto ">
         </div>
     </section>\
     <section class="container mx-auto flex justify-center py-10 gap-10 " >
         <div id="design" class="align-center py-5 ">
+            <div class="flex items-center justify-center py-10">
             <img src="/asset/what we do/design.png" alt="">
+        </div>
             <h1 class="text-center">Design</h1>
             <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
         </div>
         <div id="frontEnd" class="align-center py-5">
+            <div class="flex items-center justify-center py-10">
             <img src="/asset/what we do/front end.png" alt="">
+            </div>
             <h1 class="text-center">Front-end</h1>
             <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
         </div>
         <div id="Backend" class="align-center py-5">
+            <div class="flex items-center justify-center py-10">
             <img src="/asset/what we do/back end.png" alt="">
+            </div>
             <h1 class="text-center">Back-end</h1>
             <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
         </div>
         <div id="check" class="align-center py-5">
+            <div class="flex items-center justify-center py-10">
             <img class="center" src="/asset/what we do/check.png" alt="">
+            </div>
             <h1 class="text-center">Chek Test</h1>
             <p class="text-center"> Create Wireframe Display Designs <br> And Initial UI Designs For Websites</p>
         </div>
     </section>
-    <section class="container mx-auto">
-        <h1 class="text-center"> Our Work</h1>
-        <p class="text-center">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på </p>
+    <section class="container mx-auto py-10">
+        <h1 class="text-center text-[35px] text-plusJakartaSans"> Our Work</h1>
+        <p class="text-center py-10">Lörem ipsum patev antifili astrokålonat. Vanat aheten. Ekofiering makrora, på </p>
     </section>
-    <div id="orally" class="container mx-auto flex justify-between">
+    <div id="orally" class="bg-[#F6F9FC] rounded-lg px-16 container mx-auto flex justify-between py-5">
         <div>
         <img src="/asset/logo orally.png" alt="">
         <img class="absolut" src="/asset/orally.png" alt="">
-        <h1>Retainer orally Studi</h1>
+        <h1 class="text-[40px] text-plusJakartaSans py-5 font-bold">Retainer orally Studi</h1>
         <p>Retainer Orely Studio is a website from the Orely company that we <br> developed into Code.</p>
         <div class="flex gap-10">
             <a href="#get-started" class="button-primary">Read more</a>
@@ -257,48 +290,54 @@
         </div>
     </div>
     <section class="container mx-auto flex justify-between gap-5 px-30 py-10">
-        <div class="px-10 bg-[#F6F9FC]">
+        <div class="px-10 bg-[#F6F9FC] px-16 py-10 rounded-lg">
             <img src="/asset/federasi ice skating.png" alt="">
-            <h1>Federasi Ice Skating Indonesia</h1>
+            <h1 class="text-[32px] text-plusJakartaSans py-5 font-bold">Federasi Ice Skating Indonesia</h1>
             <br>
             <p>Retainer Orely Studio is a website from the Orely company that we <br> developed into Code.</p>
-            <div class="flex gap-10">
+            <div class="flex gap-10 py-5">
                 <a href="#get-started" class="button-primary">Read more</a>
                 <a href="#" class="underline flex items-center gap-3">Link Website<img src="/asset/Vector.png" alt=""></a>
             </div>
             <img src="/asset/MacBook Pro 16.png" alt="">
         </div>
-        <div class="px-10 h-92">
+        <div class="px-10 bg-[#F6F9FC] px-16 py-10 rounded-lg">
             <img src="/asset/bea cukai.png" alt="">
-            <h1>Bea Cukai Sangatta</h1>
+            <h1 class="text-[32px] text-plusJakartaSans py-5 font-bold">Bea Cukai Sangatta</h1>
             <p>Retainer Orely Studio is a website from the Orely company that we <br> developed into Code.</p>
-            <div class="flex gap-10">
+            <div class="flex gap-10 py-5">
                 <a href="#get-started" class="button-primary">Read more</a>
                 <a href="#" class="underline flex items-center gap-3">Link Website<img src="/asset/Vector.png" alt=""></a>
             </div>
             <img src="/asset/MacBook Pro 16 (1).png" alt="">
         </div>
     </section>
-    <div class="align-center justify-between-center">
+    <div class="flex align-center justify-center">
         <a href="#get-started" class="button-primary">Our work</a>
     </div>
-    <section class="container mx-auto flex py-20 px-20">
-       <div> <h1><span class="text-gradient"> What Do People Say About </span><br>
+    <section class="container mx-auto py-20 px-20">
+       <div class="flex"> 
+            <h1 class="text-[32px] text-plusJakartaSans py-10"><span class="text-gradient"> What Do People Say About </span><br>
             The Mangcoding Team?</h1>
-        <div  class="flex">
-            <img src="/asset/Frame 1597882693.png" alt="">
-            <h1>Riko sapto bimo</h1>
-            <p> <br> Managing Director Orely.co</p>
-        </div>
+            </div>
+        <div class="">
+            <div  class="flex border border-solid rounded-lg gap-5">
+                <img src="/asset/Frame 1597882693.png" alt="">
+            <div>
+                 <h1>Riko sapto bimo</h1>
+                 <p>Managing Director Orely.co</p>
+             </div>
+            </div>
         <div  class="flex">
             <img src="/asset/Frame 1597882693 (1).png" alt="">
             <h1>Riko sapto bimo</h1>
             <p> <br> Managing Director Orely.co</p>
         </div>
-        </div>
         <div class="align-center justify-center">
             <img src="/asset/quotes.png" alt="">
         </div>
+    </div>
+    </div>
     </section>
     <div class="align-center">
         <h1 class="text-center">Our blog</h1>

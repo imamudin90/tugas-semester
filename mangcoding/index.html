@@ -12,12 +12,16 @@
     <script src="./tailwind.config.js"></script>
     <style type="text/tailwindcss">
     @layer utilities {
-          nav a {
-            @apply text-nav hover:text-black font-raleway;
+        nav a {
+            @apply text-white text-2xl lg:text-base font-bold lg:font-normal lg:text-nav hover:text-black font-raleway;
           }
 
           nav a.active {
             @apply text-black;
+          }
+
+          nav > ul > li {
+            @apply p-5;
           }
 
           .button-primary {
@@ -38,32 +42,103 @@
             background-clip: text;
             text-fill-color: transparent;
           }
+        .submenu {
+            @apply absolute m-0 py-1 bg-primary invisible opacity-0 transition-all ease-in-out;
         }
+
+        .submenu a {
+            @apply text-white min-w-[135px] w-full block py-1 px-4 hover:bg-secondary hover:text-white;
+        }
+
+        .has-child:hover .submenu {
+            @apply visible opacity-100;
+        }
+
+        .has-child {
+            @apply relative cursor-pointer;
+        }
+        .has-child > span.caret {
+            @apply invert absolute h-[26px] w-[12px] -right-0 top-1/2 transform -translate-y-1/2;
+            content: url('data:image/svg+xml;charset=UTF-8, <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.666992 0.666748L4.33366 4.66675L8.00033 0.666748" stroke="white"/></svg>');
+        }
+        
+        @media screen and (max-width:1023px) {
+            nav {
+                left: -100%;
+                transition: all .3s ease-in-out;
+            }
+            nav > ul > li {
+                @apply w-full p-0;
+            }
+            .has-child  {
+                @apply overflow-hidden;
+            }
+            .has-child > span.caret {
+                @apply invert-0 top-4;
+            }
+            .has-child.active .submenu {
+                @apply visible opacity-100 max-h-[1000px];
+            }
+            nav .submenu {
+                @apply visible opacity-100 relative w-full max-h-0;
+            }
+            nav.active {
+                left: 0;
+            }
+        }
+        }
+    
         </style>
 </head>
 <body>
     <header class="bg-gradient" >
         <section class="container mx-auto">
-            <section id="top-bar" class="flex justify-between py-10 px-20 ">
-                <div id="left-side" class="flex gap-5 items-center px-20"  >
-                    <img src="/asset/Logo.jpg" alt="">
+            <section id="topbar" class="flex justify-between gap-5 items-center py-5">
+                <div id="left-side" class="flex gap-10 items-center">
+                    <div class="flex gap-5 pr-20 ">
+                        <img src="/asset/Logo.jpg" alt="">
+                        <p class="font-bold">Mangcoding</p>
+                </div>
                     <nav>
-                        <ul class="grid grid-cols-6 gap-10 " >
-                            <li><a href="#" class="active">Home</a></li>
-                            <li><a href="#">About</a></li>
+                        <ul class="grid grid-cols-6 gap-7 " >
+                            <li><a href="#" class="active"> <span class="icon-home"></span> Home</a></li>
+                            <li class="has-child"><a href="#">About</a>
+                                <span class="caret"></span>
+                                <ul class="submenu">
+                                    <li><a href="#">Visi</a></li>
+                                    <li><a href="#">Misi</a></li>
+                                    <li><a href="#">Profil</a></li>
+                                    <li><a href="#">Our Team</a></li>
+                                </ul>  
+                            </li>
                             <li><a href="#">Services</a></li>
-                            <li><a href="#">Our Work</a></li>
+                            <li class="has-child">
+                                <a href="#">Work</a>
+                                <span class="caret"></span>
+                                <ul class="submenu">
+                                    <li><a href="#">Portfolio</a></li>
+                                    <li><a href="#">Study Cases</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#"><span class="icon-address-book"></span> Contact</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div id="right-side" class="flex gap-10 py-10">
+                <div id="right-side" class="pr-12 lg:pr-0 flex items-center gap-10">
                     <button>
                         <img src="/asset/Group 23.png" alt="">
                     </button>
                     <a href="#get-started" class="button-primary">Get Started</a>
                 </div>
+                <button class="mobile-btn fixed right-6 top-6 lg:static lg:hidden">
+                    <svg class="bar" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 17H19M5 12H19M5 7H19" stroke="black" stroke-width="2.01562" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6439 11.9998L18.657 6.99835C18.8765 6.77882 18.9998 6.48107 18.9998 6.17061C18.9998 5.86014 18.8765 5.5624 18.657 5.34286C18.4374 5.12333 18.1397 5 17.8292 5C17.5187 5 17.221 5.12333 17.0015 5.34286L12 10.356L6.99857 5.34286C6.77904 5.12333 6.48129 5 6.17083 5C5.86036 5 5.56261 5.12333 5.34308 5.34286C5.12355 5.5624 5.00022 5.86014 5.00022 6.17061C5.00022 6.48107 5.12355 6.77882 5.34308 6.99835L10.3562 11.9998L5.34308 17.0012C5.23381 17.1096 5.14708 17.2386 5.08789 17.3806C5.0287 17.5227 4.99823 17.6751 4.99823 17.829C4.99823 17.9829 5.0287 18.1353 5.08789 18.2773C5.14708 18.4194 5.23381 18.5484 5.34308 18.6567C5.45146 18.766 5.58041 18.8527 5.72247 18.9119C5.86454 18.9711 6.01692 19.0016 6.17083 19.0016C6.32473 19.0016 6.47711 18.9711 6.61918 18.9119C6.76125 18.8527 6.89019 18.766 6.99857 18.6567L12 13.6436L17.0015 18.6567C17.1098 18.766 17.2388 18.8527 17.3809 18.9119C17.5229 18.9711 17.6753 19.0016 17.8292 19.0016C17.9831 19.0016 18.1355 18.9711 18.2776 18.9119C18.4196 18.8527 18.5486 18.766 18.657 18.6567C18.7662 18.5484 18.853 18.4194 18.9121 18.2773C18.9713 18.1353 19.0018 17.9829 19.0018 17.829C19.0018 17.6751 18.9713 17.5227 18.9121 17.3806C18.853 17.2386 18.7662 17.1096 18.657 17.0012L13.6439 11.9998Z" fill="#000"/>
+                    </svg>                                                        
+                </button>
             </section>
         </section>
         <section id="hero" class="flex flex-col gap-5">
@@ -265,5 +340,6 @@
         <a href="#get-started" class="button-primary">Build website now</a>
     </div>
     </section>
+    <script src="./app.js"></script>
 </body>
 </html>

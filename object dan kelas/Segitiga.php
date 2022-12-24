@@ -2,6 +2,7 @@
 class Segitiga{
     public $alas;
     public $tinggi;
+    public $hitungLuas;
 
     public function __construct($alas, $tinggi){
         $this->alas=($alas);

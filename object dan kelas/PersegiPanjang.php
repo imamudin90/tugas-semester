@@ -2,6 +2,7 @@
 class PersegiPanjang {
     public $panjang;
     public $lebar;
+    public $hitungLuas;
 
     public function __construct($panjang, $lebar) {
         $this->panjang=($panjang);
